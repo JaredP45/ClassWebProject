@@ -19,11 +19,16 @@ For initial setup follow these steps.
    * This repository includes the venv (virtual environment) which allows access to python.
 
 
-3. ```cd base/``` to access manage.py and use ```ll``` or ```ls -l``` to observe directory.
+3. This part might be prone to causing issues. In order to have the correct libraries, you have to install all the libraries needed for the project. To do that, you have to activate your virtual environment.
+   * If using the venv provided in the project, enter ```source venv-WebProject\Scripts\activate```, and you should see ```(venv-WebProject)``` near your terminal entry.
+   * If that works, run ```python pip install requirements.txt``` while in ```ClassWebProject/base/``` directory. It should install all the necessary libraries. 
+
+
+4. ```cd base/``` to access manage.py and use ```ll``` or ```ls -l``` to observe directory.
    * (```base``` is project parent which has ```manage.py```, where ```base/base``` has config files like settings.)
 
 
-4. Enter ```python manage.py runserver``` to run server, and check on ```http://127.0.0.1:8000/```
+5. Enter ```python manage.py runserver``` to run server, and check on ```http://127.0.0.1:8000/```
    * If you get a django page that says "The install worked successfully! Congratulations!" you did it!
 
 ## Updating:
@@ -60,7 +65,7 @@ If you added, changed, or removed anything, follow these steps:
 
 
 8. ```git push origin master``` to finally push up your changes.
-   * This will then ask for your github user name and password. Github recently deprecated the use of user passwords for pushing, so you will need a repository key from Jared and enter it for the password.
+   * This will then ask for your GitHub user-name and password. GitHub recently deprecated the use of user passwords for pushing, so you will need a repository key from Jared and enter it for the password.
 
    
 📧 Imagine this process like sending a letter. 
