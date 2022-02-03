@@ -1,6 +1,7 @@
 # Butler Capstone Website
 
 Author: Jared Paubel
+
 Sources:
 * [Git Docs](https://git-scm.com/)
 * [Useful Git Commands](https://krishnaiitd.github.io/gitcommands/git-workflow/)
