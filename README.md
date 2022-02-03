@@ -1,6 +1,10 @@
 # Butler Capstone Website
 
 Author: Jared Paubel
+Sources:
+* [Git Docs](https://git-scm.com/)
+* [Useful Git Commands](https://krishnaiitd.github.io/gitcommands/git-workflow/)
+
 
 **Note**: This is assuming you are using Unix/Linux terminals; use Git Bash software to follow the commands below unless you are familiar with windows terminal.
 
@@ -11,7 +15,7 @@ For initial setup follow these steps.
 
 2. In terminal, type ```git clone https://github.com/JaredP45/ClassWebProject/```
    * Terminal will clone the repository in your desired location (recommend /Desktop for testing).
-   * This respository includes the venv (virtual environment) which allows access to python.
+   * This repository includes the venv (virtual environment) which allows access to python.
 
 
 3. ```cd base/``` to access manage.py and use ```ll``` or ```ls -l``` to observe directory.
@@ -25,12 +29,12 @@ For initial setup follow these steps.
 If there is an update on the remote repository (GitHub), follow these steps to update your local copy. 
 
 1. ```git status``` to check what's been staged or changed.
-
+   * If there are changes to be staged, use ```git stash <ITEMS-TO-BE-STASHED>``` to temporarily hold your changes while you pull.
 
 2. ```git pull origin master``` to pull down what you don't have (i.e. update your copy)
 
 
-3. Inside ClassWebProject/base/, run localhost server ```python manage.py runserver``` and check if it runs without issue.
+3. Inside ClassWebProject/base/, run localhost server ```python manage.py runserver``` and check if it runs without issues.
 
 
 ## Sending Your Local Update:
