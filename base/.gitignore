@@ -1,0 +1,8 @@
+base/.env
+db.sqlite3
+*.jpg
+*.JPG
+*.png
+*.jpeg
+__pycache__
+../.idea/
