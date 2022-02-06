@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block lower %}
+
+{% for data in team %}
+<h1>{{ data.member_photo }}</h1>
+{% endfor %}
+
+{% endblock lower %}

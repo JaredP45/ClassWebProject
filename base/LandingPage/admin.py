@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Navbar, UpperSection, MidSection, LowerSection, PageFooter
+
+admin.site.register(Navbar)
+admin.site.register(UpperSection)
+admin.site.register(MidSection)
+admin.site.register(LowerSection)
+admin.site.register(PageFooter)

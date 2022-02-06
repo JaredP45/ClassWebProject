@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block upper %}
+
+{% for data in greeting %}
+<h1>{{ data.welcome_message }}</h1>
+{% endfor %}
+
+{% endblock upper %}
