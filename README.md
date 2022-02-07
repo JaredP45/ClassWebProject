@@ -35,7 +35,7 @@ For initial setup follow these steps.
 If there is an update on the remote repository (GitHub), follow these steps to update your local copy. 
 
 1. ```git status``` to check what's been staged or changed.
-   * If there are changes to be staged, use ```git stash <ITEMS-TO-BE-STASHED>``` to temporarily hold your changes while you pull.
+   * If there are changes to be staged, use ```git stash save <ITEMS-TO-BE-STASHED>``` to temporarily hold your changes while you pull. If you need to see what has beeen stashed, use ```git stash list``` or ```git stash show``` To unstash, use ```git stash pop```.
 
 2. ```git pull origin master``` to pull down what you don't have (i.e. update your copy)
 
