@@ -1,5 +1,4 @@
 
-{% block middle %}
-<h1>{{ about_us }}</h1>
-
-{% endblock middle %}
+{% for data in about %}
+    <h1>{{ data.about_us }}</h1>
+{% endfor %}

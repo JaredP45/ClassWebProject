@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <title>Index</title>
 </head>
-<p>Navbar</p>
 <body>
 {% block navbar %}
 {% endblock navbar %}
 
-{% block upper %}
-{% endblock upper %}
+
+{% include 'UpperSection.html' %}
 
 {% include 'MidSection.html' %}
 
-{% block lower %}
-{% endblock lower %}
+{% include 'LowerSection.html' %}
 
 {% block footer %}
 {% endblock footer %}

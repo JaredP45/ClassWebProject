@@ -29,9 +29,10 @@ class LowerSection(models.Model):
         This is currently a placeholder.
     """
     member_photo = models.ImageField(blank=True)
+    member_desc = models.CharField(max_length=250, default="")
 
     def __str__(self):
-        return self.member_photo
+        return self.member_desc
 
 
 class PageFooter(models.Model):
