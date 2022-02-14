@@ -20,8 +20,12 @@ For initial setup follow these steps.
 
 
 3. This part might be prone to causing issues. In order to have the correct libraries, you have to install all the libraries needed for the project. To do that, you have to activate your virtual environment.
-   * If using the venv provided in the project, enter ```source venv-WebProject\Scripts\activate```, and you should see ```(venv-WebProject)``` near your terminal entry.
-   * If that works, run ```python pip install requirements.txt``` while in ```ClassWebProject/base/``` directory. It should install all the necessary libraries. 
+   * For Windows:
+   From ```ClassWebProject/base/``` enter ```source venv\venv-windows\Scripts\activate```, and you should see ```(venv-windows)``` near your terminal entry.
+   * For Linux/Unix:
+   From ```ClassWebProject/base/``` enter ```source venv/venv-linux/bin/activate```, and you should see ```(venv-linux)``` near your terminal entry.
+   
+   * Then run ```python pip install -r requirements.txt``` while in ```ClassWebProject/base/``` directory. It should install all the necessary libraries. 
 
 
 4. ```cd base/``` to access manage.py and use ```ll``` or ```ls -l``` to observe directory.
