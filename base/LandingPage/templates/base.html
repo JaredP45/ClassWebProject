@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-{% block navbar %}
-{% endblock navbar %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static '/bootstrap-5.1.3-dist/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static '/bootstrap-5.1.3-dist/bootstrap.min.map' %}" />
+        <title>Butler 2022 Capstone</title>
+    </head>
+    <body>
+    {% block navbar %}
+    {% endblock navbar %}
 
+    {% include 'UpperSection.html' %}
 
-{% include 'UpperSection.html' %}
+    {% include 'MidSection.html' %}
 
-{% include 'MidSection.html' %}
+    {% include 'LowerSection.html' %}
 
-{% include 'LowerSection.html' %}
-
-{% block footer %}
-{% endblock footer %}
-</body>
+    <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.min.map' %}"></script>
+    </body>
+    {% block footer %}
+    {% endblock footer %}
 </html>
