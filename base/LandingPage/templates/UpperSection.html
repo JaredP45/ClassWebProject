@@ -1,11 +1,8 @@
-{% extends 'base.html' %}
-{% block UpperSection %}
-    {% load static %}
-    {% for data in greeting %}
-        <header class="page-header header container-fluid"
-            style="background-image: url({{ data.banner.url }});"
-        >
-        </header>
-        <h1>{{ data.welcome_message }}</h1>
-    {% endfor %}
-{% endblock UpperSection %}
+{% load static %}
+{% for data in greeting %}
+    <header class="page-header header container-fluid"
+        style="background-image: url({{ data.banner }});"
+    >
+    </header>
+    <h1>{{ data.welcome_message }}</h1>
+{% endfor %}

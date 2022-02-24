@@ -1,13 +1,6 @@
 from django.db import models
 
 
-class Navbar(models.Model):
-    page = models.CharField(max_length=250)
-
-    def __str__(self):
-        return self.page
-
-
 class UpperSection(models.Model):
     banner = models.ImageField(blank=True)
     welcome_message = models.CharField(max_length=250)

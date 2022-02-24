@@ -9,11 +9,9 @@
         <title>Butler 2022 Capstone</title>
     </head>
     <body>
-            {% block navbar %}
-            {% endblock navbar %}
+            {% include 'navbar.html' %}
 
-            {% block UpperSection %}
-            {% endblock UpperSection %}
+            {% include 'UpperSection.html' %}
 
             {% include 'MidSection.html' %}
 
@@ -22,6 +20,5 @@
         <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.min.js' %}"></script>
         <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.min.js.map' %}"></script>
     </body>
-    {% block footer %}
-    {% endblock footer %}
+    {% include 'Footer.html' %}
 </html>

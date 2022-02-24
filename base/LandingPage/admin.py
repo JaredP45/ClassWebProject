@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from .models import Navbar, UpperSection, MidSection, LowerSection, PageFooter
+from .models import UpperSection, MidSection, LowerSection, PageFooter
 
-admin.site.register(Navbar)
 admin.site.register(UpperSection)
 admin.site.register(MidSection)
 admin.site.register(LowerSection)
