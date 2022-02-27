@@ -1,8 +1,8 @@
 {% load static %}
 {% for data in greeting %}
-    <header class="page-header header container-fluid"
-        style="background-image: url({{ data.banner }});"
-    >
+    <header class="page-header header container-fluid">
+        <img src="{{ data.banner.url }}" width="1000px">
+        <div class="overlay"/>
+        <h1>{{ data.welcome_message }}</h1>
     </header>
-    <h1>{{ data.welcome_message }}</h1>
 {% endfor %}

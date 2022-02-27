@@ -1,0 +1,20 @@
+/* Imported Special CSS files */
+@import "banner.css";
+
+
+html {
+    height: 100%;
+}
+body {
+   background-color: var(--cultured);
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#content {
+   padding-bottom:60px;
+}
+#container {
+   min-height:100%;
+   position: relative;
+}
