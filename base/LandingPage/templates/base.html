@@ -16,19 +16,12 @@
     </head>
     <body>
             {% include 'navbar.html' %}
-
+            {% include 'UpperSection.html' %}
+            
             <div id='content'>
-                <div class="m-3">
-                    {% include 'UpperSection.html' %}
-                </div>
+                {% include 'MidSection.html' %}
 
-                <div class="m-3">
-                    {% include 'MidSection.html' %}
-                </div>
-
-                <div class="m-3">
-                    {% include 'LowerSection.html' %}
-                </div>
+                {% include 'LowerSection.html' %}
             </div>
 
         <!-- Imported JS -->
