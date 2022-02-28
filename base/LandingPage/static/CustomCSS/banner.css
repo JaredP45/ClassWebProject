@@ -13,7 +13,14 @@
     background: rgba(0, 0, 0, 0.6);
 }
 .banner-img {
-    max-width: 100%;
     height: auto;
-    box-shadow: 10px 10px 10px 3px black;
+    width: 100%;
+}
+
+.description {
+	left: 50%;
+	position: absolute;
+	top: 45%;
+	transform: translate(-50%, -55%);
+	text-align: center;
 }
