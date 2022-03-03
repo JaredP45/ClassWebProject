@@ -5,7 +5,8 @@
         {% for data in team %}
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <img src="{{ data.member_photo.url }}" width="150px">
-                <p>{{ data.member_desc }}</p>
+                <h2>{{ data.member_name }}</h2>
+                <p>{{ data.member_major }}</p>
             </div>
         {% endfor %}
     </div>

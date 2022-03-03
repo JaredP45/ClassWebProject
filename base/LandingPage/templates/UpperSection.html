@@ -2,7 +2,8 @@
 {% for data in greeting %}
     <header class="page-header header container-fluid">
         <img src="{{ data.banner.url }}" width="1000px">
-        <div class="overlay"/>
+
+        <div class="overlay" ></div>
         <h1>{{ data.welcome_message }}</h1>
     </header>
 {% endfor %}
