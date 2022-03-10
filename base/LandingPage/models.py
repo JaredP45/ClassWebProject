@@ -22,10 +22,13 @@ class LowerSection(models.Model):
         This is currently a placeholder.
     """
     member_photo = models.ImageField(blank=True)
+    member_name = models.CharField(max_length=250, default="")
+    member_major = models.CharField(max_length=250, default="")
     member_desc = models.CharField(max_length=250, default="")
+    member_contact = models.CharField(max_length=250, default="")
 
     def __str__(self):
-        return self.member_desc
+        return self.member_name
 
 
 class PageFooter(models.Model):
