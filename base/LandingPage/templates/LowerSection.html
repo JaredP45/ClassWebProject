@@ -1,10 +1,15 @@
 {% load static %}
 
 <div class="container">
-    <div class="row">
+    <div class="row text-center justify-content-center">
         {% for data in team %}
             <!-- Modal Trigger -->
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6" data-toggle="modal" data-target="#user-modal{{ data.id }}">
+            <!-- FIXME border being used to measure positioning of items -->
+            <div class="border col-lg-2 col-md-4 col-sm-6 col-6"
+                 data-toggle="modal"
+                 data-target="#user-modal{{ data.id }}"
+                 style="cursor: pointer;"
+            >
                 <img src="{{ data.member_photo.url }}" width="150px">
                 <h2>{{ data.member_name }}</h2>
                 <p>{{ data.member_major }}</p>
@@ -15,7 +20,12 @@
 
 {% for data in team %}
     <!-- Modal -->
-    <div class="modal fade" id="user-modal{{ data.id }}" tabindex="-1" role="dialog" aria-labelledby="user-modal-label{{ data.id }}" aria-hidden="true">
+    <div class="modal fade"
+         id="user-modal{{ data.id }}"
+         tabindex="-1" role="dialog"
+         aria-labelledby="user-modal-label{{ data.id }}"
+         aria-hidden="true"
+    >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header d-flex flex-row">
@@ -25,9 +35,7 @@
                         </h5>
                          <p>{{ data.member_major }}</p>
                     </div>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span>X</span>
-                    </button>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
@@ -37,7 +45,7 @@
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <p>{{ data.member_contact }}</p>
-                    <button type="button" class="btn btn-primary">Contact</button>
+                    <a href="mailto: {{ data.member_contact }}" class="btn btn-primary">Contact</a>
                 </div>
             </div>
         </div>
