@@ -3,7 +3,8 @@
 <div class="container">
     <div class="row">
         {% for data in team %}
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+            <!-- Modal Trigger -->
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6" data-toggle="modal" data-target="#user-modal{{ data.id }}">
                 <img src="{{ data.member_photo.url }}" width="150px">
                 <h2>{{ data.member_name }}</h2>
                 <p>{{ data.member_major }}</p>
@@ -11,3 +12,34 @@
         {% endfor %}
     </div>
 </div>
+
+{% for data in team %}
+    <!-- Modal -->
+    <div class="modal fade" id="user-modal{{ data.id }}" tabindex="-1" role="dialog" aria-labelledby="user-modal-label{{ data.id }}" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex flex-row">
+                    <div class="align-items-start">
+                        <h5 class="modal-title" id="user-modal-label{{ data.id }}">
+                            {{ data.member_name }}
+                        </h5>
+                         <p>{{ data.member_major }}</p>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span>X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img class="mb-1" src="{{ data.member_photo.url }}" width="150px">
+                    </div>
+                    <p>{{ data.member_desc }}</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <p>{{ data.member_contact }}</p>
+                    <button type="button" class="btn btn-primary">Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
