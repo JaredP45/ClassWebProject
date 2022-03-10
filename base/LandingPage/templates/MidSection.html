@@ -1,5 +1,7 @@
+{% load static %}
 
-<div class="container">
+<!-- FIXME border being used to measure positioning of items -->
+<div class="container border">
     {% for data in about %}
         <h3>{{ data.about_us }}</h3>
     {% endfor %}
