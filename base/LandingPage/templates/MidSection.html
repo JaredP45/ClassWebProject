@@ -1,8 +1,17 @@
 {% load static %}
-
-<!-- FIXME border being used to measure positioning of items -->
-<div class="container border">
-    {% for data in about %}
-        <h3>{{ data.about_us }}</h3>
-    {% endfor %}
-</div>
+{% for data in about %}
+    <!-- FIXME border being used to measure positioning of items -->
+    <div class="container border">
+        <div class="row">
+            <div class="border text-center col-lg-12 col-md-12 col-sm-12 col-12">
+                <img class="img-fluid rounded" width="635"
+                     src="{{ data.game_photo.url }}" style="cursor: pointer;"
+                >
+                <img class="img-fluid rounded" width="635"
+                     src="{{ data.movie_photo.url }}" style="cursor: pointer;"
+                >
+            </div>
+        </div>
+    </div>
+    <h3 class="text-center">{{ data.about_us }}</h3>
+{% endfor %}
