@@ -10,10 +10,16 @@ class UpperSection(models.Model):
 
 
 class MidSection(models.Model):
-    about_us = models.CharField(max_length=250)
+    game_photo = models.ImageField(blank=True)
+    movie_photo = models.ImageField(blank=True)
+    about_us = models.TextField(default='Enter text about us.', blank=True)
 
     def __str__(self):
-        return self.about_us
+        return "About us"
+
+    class Meta:
+        verbose_name = 'Student'
+        verbose_name_plural = 'Students'
 
 
 class LowerSection(models.Model):
