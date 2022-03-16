@@ -6,7 +6,11 @@ class UpperSection(models.Model):
     welcome_message = models.CharField(max_length=250)
 
     def __str__(self):
-        return self.welcome_message
+        return "Welcome banner"
+
+    class Meta:
+        verbose_name = 'Upper Section'
+        verbose_name_plural = 'Upper Sections'
 
 
 class MidSection(models.Model):
@@ -16,6 +20,10 @@ class MidSection(models.Model):
 
     def __str__(self):
         return "About us"
+
+    class Meta:
+        verbose_name = 'Middle Section'
+        verbose_name_plural = 'Middle Sections'
 
 
 class LowerSection(models.Model):
@@ -38,3 +46,7 @@ class PageFooter(models.Model):
 
     def __str__(self):
         return self.info
+    
+    class Meta:
+        verbose_name = 'Footer'
+        verbose_name_plural = 'Footers'
