@@ -46,7 +46,7 @@ class PageFooter(models.Model):
 
     def __str__(self):
         return self.info
-    
+
     class Meta:
         verbose_name = 'Footer'
         verbose_name_plural = 'Footers'
