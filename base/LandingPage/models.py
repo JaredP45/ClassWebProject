@@ -17,10 +17,6 @@ class MidSection(models.Model):
     def __str__(self):
         return "About us"
 
-    class Meta:
-        verbose_name = 'Student'
-        verbose_name_plural = 'Students'
-
 
 class LowerSection(models.Model):
     """
@@ -35,6 +31,10 @@ class LowerSection(models.Model):
 
     def __str__(self):
         return self.member_name
+
+    class Meta:
+        verbose_name = 'Student'
+        verbose_name_plural = 'Students'
 
 
 class PageFooter(models.Model):
