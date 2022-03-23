@@ -4,12 +4,16 @@
     <div class="container border">
         <div class="row">
             <div class="border text-center col-lg-12 col-md-12 col-sm-12 col-12">
-                <img class="img-fluid rounded" width="635"
-                     src="{{ data.game_photo.url }}" style="cursor: pointer;"
-                >
-                <img class="img-fluid rounded" width="635"
-                     src="{{ data.movie_photo.url }}" style="cursor: pointer;"
-                >
+                {% if data.game_photo %}
+                    <img class="img-fluid rounded" width="635"
+                         src="{{ data.game_photo.url }}" style="cursor: pointer;"
+                    >
+                {% endif %}
+                {% if data.movie_photo %}
+                    <img class="img-fluid rounded" width="635"
+                         src="{{ data.movie_photo.url }}" style="cursor: pointer;"
+                    >
+                {% endif %}
             </div>
         </div>
     </div>
