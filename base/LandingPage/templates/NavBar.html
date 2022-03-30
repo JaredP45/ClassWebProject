@@ -54,47 +54,48 @@
     >
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header d-flex flex-row">
-                    <div class="align-items-start">
-                        <h5 class="modal-title">
-                            Contact Us
-                        </h5>
+                <form action="" method="post">
+                    <div class="modal-header d-flex flex-row">
+                        <div class="align-items-start">
+                            <h5 class="modal-title">
+                                Contact Us
+                            </h5>
+                        </div>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="post">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="yTF5g7ceTgkwsOimKxZpuV10DG4a1TWFwQ60pneu047lPvu6kTAlNYPfYEC9G8jq">
-                        <tr>
-                            <th>
-                                <label for="id_email">Email:</label>
-                            </th>
-                            <td>
-                                <input type="email" name="email" maxlength="254" required id="id_email">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="id_subject">Subject:</label>
-                            </th>
-                            <td>
-                                <input type="text" name="subject" maxlength="255" required id="id_subject">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                <label for="id_message">Message:</label>
-                            </th>
-                            <td>
-                                <textarea name="message" cols="40" rows="10" required id="id_message"></textarea>
-                            </td>
-                        </tr>
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <a class="btn btn-primary">Contact</a>
-                </div>
+                        <div class="modal-body">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="yTF5g7ceTgkwsOimKxZpuV10DG4a1TWFwQ60pneu047lPvu6kTAlNYPfYEC9G8jq">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <label for="id_email">Email:</label>
+                                    </th>
+                                    <td>
+                                        <input type="email" name="email" maxlength="254" required id="id_email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="id_subject">Subject:</label>
+                                    </th>
+                                    <td>
+                                        <input type="text" name="subject" maxlength="255" required id="id_subject">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <label for="id_message">Message:</label>
+                                    </th>
+                                    <td>
+                                        <textarea name="message" cols="25" rows="10" required id="id_message"></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    <div class="modal-footer d-flex justify-content-between">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
