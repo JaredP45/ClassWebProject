@@ -50,12 +50,3 @@ class PageFooter(models.Model):
     class Meta:
         verbose_name = 'Footer'
         verbose_name_plural = 'Footers'
-
-
-class Contact(models.Model):
-    email = models.EmailField()
-    subject = models.CharField(max_length=255)
-    message = models.TextField()
-
-    def __str__(self):
-        return self.email
