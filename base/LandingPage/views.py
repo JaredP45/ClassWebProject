@@ -8,17 +8,6 @@ from .models import UpperSection, MidSection, LowerSection
 
 
 def base(request):
-    context = {
-        'greeting': UpperSection.objects.all(),
-        'about': MidSection.objects.all(),
-        'team': LowerSection.objects.all(),
-        'form': ContactForm,
-    }
-
-    return render(request, 'base.html', context)
-
-
-def contactView(request):
     if request.method == 'GET':
         form = ContactForm()
     else:
@@ -32,7 +21,15 @@ def contactView(request):
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('success')
-    return render(request, "email.html", {'form': form})
 
-def successView(request):
+    context = {
+        'greeting': UpperSection.objects.all(),
+        'about': MidSection.objects.all(),
+        'team': LowerSection.objects.all(),
+        'form': form,
+    }
+    return render(request, 'base.html', context)
+
+
+def successView():
     return HttpResponse('Success! Thank you for your message.')
