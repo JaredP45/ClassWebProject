@@ -64,10 +64,14 @@
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
                         <div class="modal-body">
+                            {% load crispy_forms_tags %}
                             {% csrf_token %}
-                            {{ form.as_p }}
+
+                            {{ form.from_email | as_crispy_field }}
+                            {{ form.subject | as_crispy_field }}
+                            {{ form.message | as_crispy_field }}
                         </div>
-                    <div class="modal-footer d-flex justify-content-between">
+                    <div class="modal-footer d-flex justify-content-center">
                         <input class="btn btn-primary" type="submit" value="Submit">
                     </div>
                 </form>
