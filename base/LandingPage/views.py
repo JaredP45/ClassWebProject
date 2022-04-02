@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
+from django.contrib import messages
 
 from .forms import ContactForm
 from .models import UpperSection, MidSection, LowerSection
@@ -20,7 +21,9 @@ def base(request):
                 send_mail(subject, message, from_email, ['admin@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return HttpResponse('Success! Thank you for your message.')
+            messages.success(request, 'Message sent, talk to you soon!')
+            return redirect('home')
+        messages.error(request, 'Error. Message has not been sent.')
 
     context = {
         'greeting': UpperSection.objects.all(),
