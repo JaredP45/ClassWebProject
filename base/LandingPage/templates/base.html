@@ -10,17 +10,20 @@
         <link rel="stylesheet" href="{% static 'bootstrap-5.1.3-dist/css/bootstrap.min.css.map' %}" />
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="../static/CustomCSS/base.css" />
-        <link rel="stylesheet" href="../static/CustomCSS/banner.css" />
-        <link rel="stylesheet" href="../static/CustomCSS/mid.css" />
-        <link rel="stylesheet" href="../static/CustomCSS/lower.css" />
-        <link rel="stylesheet" href="../static/CustomCSS/footer.css" />
-        <link rel="stylesheet" href="../static/CustomCSS/navbar.css" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/base.css' %}" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/banner.css' %}" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/contact.css' %}" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/mid.css' %}" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/lower.css' %}" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/footer.css' %}" />
+        <link rel="stylesheet" href="{% static 'CustomCSS/navbar.css' %}" />
 
         <title>Butler 2022 Capstone</title>
     </head>
     <body>
             {% include 'NavBar.html' %}
+            {% include 'Messages.html' %}
+            {% include 'Contact.html' %}
             {% include 'UpperSection.html' %}
 
             <div id='content'>
@@ -32,6 +35,9 @@
         <!-- Imported JS -->
         <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.min.js' %}"></script>
         <script src="{% static 'bootstrap-5.1.3-dist/js/bootstrap.min.js.map' %}"></script>
+
+        <!-- Custom JS -->
+        <script src="{% static 'CustomJS/messages.js' %}"></script>
     </body>
     {% include 'Footer.html' %}
 </html>
