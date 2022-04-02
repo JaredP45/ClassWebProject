@@ -20,7 +20,7 @@ def base(request):
                 send_mail(subject, message, from_email, ['admin@example.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('success')
+            return HttpResponse('Success! Thank you for your message.')
 
     context = {
         'greeting': UpperSection.objects.all(),
@@ -29,7 +29,3 @@ def base(request):
         'form': form,
     }
     return render(request, 'base.html', context)
-
-
-def successView():
-    return HttpResponse('Success! Thank you for your message.')
