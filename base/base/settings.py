@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'crispy_forms',
+    'hcaptcha',
     'LandingPage',
 ]
 
@@ -150,3 +151,7 @@ MESSAGE_TAGS = {
         messages.WARNING: 'alert-warning',
         messages.ERROR: 'alert-danger',
  }
+
+# hCaptcha Settings
+HCAPTCHA_SITEKEY = env('HCAPTCHA_SITEKEY')
+HCAPTCHA_SECRET = env('HCAPTCHA_SECRET')

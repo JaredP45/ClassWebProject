@@ -23,7 +23,7 @@ def base(request):
                 return HttpResponse('Invalid header found.')
             messages.success(request, 'Message sent, talk to you soon!')
             return redirect('home')
-        messages.error(request, 'Error. Message has not been sent.')
+        messages.error(request, 'The hCaptcha is invalid. Please try again.')
 
     context = {
         'greeting': UpperSection.objects.all(),
