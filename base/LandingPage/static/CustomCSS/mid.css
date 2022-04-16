@@ -1,9 +1,10 @@
 .midSection {
-    margin-top: 2em;
     margin-bottom: 2em;
-    cursor: pointer;
+    background-color: #fefefe;
+    border-radius: 25px;
 }
 .zoom {
+    cursor: pointer;
     padding: 25px;
     transition: transform .2s; /* Animation */
 }
