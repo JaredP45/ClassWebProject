@@ -1,12 +1,10 @@
 .midSection {
     margin-top: 2em;
+    margin-bottom: 2em;
     cursor: pointer;
 }
-.portal {
-    border-color: white;
-}
 .zoom {
-    padding: 50px;
+    padding: 25px;
     transition: transform .2s; /* Animation */
 }
 .zoom:hover {

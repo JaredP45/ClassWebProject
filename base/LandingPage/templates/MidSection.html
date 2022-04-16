@@ -3,17 +3,17 @@
     <!-- FIXME border being used to measure positioning of items -->
     <div class="midSection container border">
         <div class="row">
-            <div class="border text-center col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="border text-center">
                 {% if data.game_photo %}
-                    <a class="portal" href="https://callofthecold.com">
-                        <img class="img-fluid rounded zoom" width="450"
+                    <a href="https://callofthecold.com">
+                        <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
                              src="{{ data.game_photo.url }}"
                         >
                     </a>
                 {% endif %}
                 {% if data.movie_photo %}
-                    <a class="portal" href="https://fourpointmovie.com">
-                        <img class="img-fluid rounded zoom" width="400"
+                    <a href="https://fourpointmovie.com">
+                        <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
                              src="{{ data.movie_photo.url }}"
                         >
                     </a>
