@@ -1,18 +1,22 @@
 {% load static %}
 {% for data in about %}
     <!-- FIXME border being used to measure positioning of items -->
-    <div class="container border">
+    <div class="midSection container border">
         <div class="row">
-            <div class="border text-center col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="border text-center">
                 {% if data.game_photo %}
-                    <img class="img-fluid rounded" width="635"
-                         src="{{ data.game_photo.url }}" style="cursor: pointer;"
-                    >
+                    <a href="https://callofthecold.com">
+                        <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
+                             src="{{ data.game_photo.url }}"
+                        >
+                    </a>
                 {% endif %}
                 {% if data.movie_photo %}
-                    <img class="img-fluid rounded" width="635"
-                         src="{{ data.movie_photo.url }}" style="cursor: pointer;"
-                    >
+                    <a href="https://fourpointmovie.com">
+                        <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
+                             src="{{ data.movie_photo.url }}"
+                        >
+                    </a>
                 {% endif %}
             </div>
         </div>
