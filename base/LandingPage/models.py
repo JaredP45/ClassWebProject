@@ -27,8 +27,8 @@ class MidSection(models.Model):
 
 
 class StudentSection(models.Model):
-    student_section_description = models.ImageField(max_length=250, default="")
-    
+    student_section_description = models.CharField(max_length=250, default="")
+
     def __str__(self):
         return "Student section description."
 
