@@ -1,11 +1,15 @@
 html {
     height: 100%;
 }
-#content {
+#student_section {
     padding-top: 2em;
     padding-bottom: 60px;
     background: url("/static/img/body_background_image.png");
     background-repeat: no-repeat;
+}
+#about_section {
+    padding-bottom: 60px;
+    background-color: #7F7CAF;
 }
 #container {
     min-height: 100%;
