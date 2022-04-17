@@ -26,6 +26,13 @@ class MidSection(models.Model):
         verbose_name_plural = 'Middle Sections'
 
 
+class StudentSection(models.Model):
+    student_section_description = models.ImageField(max_length=250, default="")
+    
+    def __str__(self):
+        return "Student section description."
+
+
 class LowerSection(models.Model):
     member_photo = models.ImageField(blank=True)
     member_name = models.CharField(max_length=250, default="")
