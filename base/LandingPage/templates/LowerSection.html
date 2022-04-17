@@ -8,11 +8,10 @@
             <div class="border col-lg-2 col-md-4 col-sm-6 col-6 profile"
                  data-toggle="modal"
                  data-target="#user-modal{{ data.id }}"
-                 style="cursor: pointer;"
             >
-                <img src="{{ data.member_photo.url }}" width="150px">
-                <h2>{{ data.member_name }}</h2>
-                <p>{{ data.member_major }}</p>
+                <img class="member_photo member_photo_grid" src="{{ data.member_photo.url }}">
+                <h2 class="member_text">{{ data.member_name }}</h2>
+                <p class="member_text">{{ data.member_major }}</p>
             </div>
         {% endfor %}
     </div>
@@ -39,7 +38,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
-                        <img class="mb-1" src="{{ data.member_photo.url }}" width="150px">
+                        <img class="member_photo member_photo_detail" src="{{ data.member_photo.url }}">
                     </div>
                     <p>{{ data.member_desc }}</p>
                 </div>

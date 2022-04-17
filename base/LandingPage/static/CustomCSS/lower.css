@@ -1,6 +1,34 @@
 .profile {
     background-color: #fefefe;
-    border-radius: 25px;
+    border-radius: 10%;
     padding: 10px;
     margin: 10px;
+    cursor: pointer;
+    height: 250px;
+}
+.member_text {
+    margin: 10px;
+}
+.member_photo {
+    border-radius: 5%;
+}
+.member_photo_grid {
+    width: 150px;
+}
+.member_photo_detail {
+    width: 250px;
+    margin-bottom: 1em;
+}
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+  .member_text {
+    font-size: 20px;
+  }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .member_text {
+    font-size: 16px;
+  }
 }
