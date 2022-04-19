@@ -27,9 +27,15 @@ class MidSection(models.Model):
 
 
 class LowerSection(models.Model):
+    MAJOR = (
+        (0, "Web Development"),
+        (1, "Software Development"),
+        (3, "Digital Media"),
+    )
+
     member_photo = models.ImageField(blank=True)
     member_name = models.CharField(max_length=250, default="")
-    member_major = models.CharField(max_length=250, default="")
+    member_major = models.IntegerField(choices=MAJOR, default=0)
     member_desc = models.TextField(max_length=750, default="")
     member_contact = models.CharField(max_length=250, default="")
 
