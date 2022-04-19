@@ -1,4 +1,9 @@
 {% load static %}
+{% for data in student %}
+    <div class="text-center">
+        <h4>{{ data.student_section_description }}</h4>
+    </div>
+{% endfor %}
 
 <div class="container">
     <div class="row text-center justify-content-center">
