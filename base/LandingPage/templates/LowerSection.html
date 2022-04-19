@@ -1,21 +1,33 @@
 {% load static %}
 
 <div class="container">
+    <h2 class="text-center">Website Developers</h2>
     <div class="row text-center justify-content-center">
         {% for data in team %}
-            <!-- Modal Trigger -->
-            <!-- FIXME border being used to measure positioning of items -->
-            <div class="border col-lg-2 col-md-4 col-sm-6 col-6"
-                 data-toggle="modal"
-                 data-target="#user-modal{{ data.id }}"
-                 style="cursor: pointer;"
-            >
-                <img src="{{ data.member_photo.url }}" width="150px">
-                <h2>{{ data.member_name }}</h2>
-                <p>{{ data.member_major }}</p>
-            </div>
+            {% if data.member_major == 'Web Development' %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
         {% endfor %}
     </div>
+
+    <h2 class="text-center">Software Developers</h2>
+    <div class="row text-center justify-content-center">
+        {% for data in team %}
+            {% if data.member_major == 'Software Development' %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2 class="text-center">Digital Media</h2>
+    <div class="row text-center justify-content-center">
+        {% for data in team %}
+            {% if data.member_major == 'Digital Media' %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
 </div>
 
 {% for data in team %}

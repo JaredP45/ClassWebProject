@@ -1,0 +1,12 @@
+<!-- Modal Trigger -->
+<!-- FIXME border being used to measure positioning of items -->
+
+<div class="border col-lg-2 col-md-4 col-sm-6 col-6"
+     data-toggle="modal"
+     data-target="#user-modal{{ data.id }}"
+     style="cursor: pointer;"
+>
+    <img src="{{ data.member_photo.url }}" width="150px">
+    <h2>{{ data.member_name }}</h2>
+    <p>{{ data.member_major }}</p>
+</div>
