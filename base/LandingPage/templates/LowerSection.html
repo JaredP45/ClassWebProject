@@ -5,53 +5,51 @@
     </div>
 {% endfor %}
 
-<div class="container">
-    <div class="row text-center justify-content-center">
+<div class="container border mt-5 mb-5 p-5">
+    <div class="d-flex justify-content-between p-5"
+         data-toggle="collapse"
+         data-target="#webdev"
+    >
+        <h2  style="cursor: pointer;">Website Developers</h2>
+        <i class="fas fa-arrow-down" style="cursor: pointer;"></i>
+    </div>
+    <div id="webdev" class="row text-center justify-content-center collapse">
         {% for data in team %}
-            <!-- Modal Trigger -->
-            <!-- FIXME border being used to measure positioning of items -->
-            <div class="border col-lg-2 col-md-4 col-sm-6 col-6 profile"
-                 data-toggle="modal"
-                 data-target="#user-modal{{ data.id }}"
-            >
-                <img class="member_photo member_photo_grid" src="{{ data.member_photo.url }}">
-                <h2 class="member_text">{{ data.member_name }}</h2>
-                <p class="member_text">{{ data.member_major }}</p>
-            </div>
+            {% if data.member_major == 0 %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="d-flex justify-content-between p-5"
+         data-toggle="collapse"
+         data-target="#softdev"
+    >
+        <h2 style="cursor: pointer;">Software Developers</h2>
+        <i class="fas fa-arrow-down" style="cursor: pointer;"></i>
+    </div>
+    <div id="softdev" class="row text-center justify-content-center collapse">
+        {% for data in team %}
+            {% if data.member_major == 1 %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class=" d-flex justify-content-between p-5"
+         data-toggle="collapse"
+         data-target="#digmed"
+    >
+        <h2 style="cursor: pointer;">Digital Media</h2>
+        <i class="fas fa-arrow-down" style="cursor: pointer;"></i>
+    </div>
+    <div id="digmed" class="row text-center justify-content-center collapse">
+        {% for data in team %}
+            {% if data.member_major == 2 %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
         {% endfor %}
     </div>
 </div>
 
-{% for data in team %}
-    <!-- Modal -->
-    <div class="modal fade"
-         id="user-modal{{ data.id }}"
-         tabindex="-1" role="dialog"
-         aria-labelledby="user-modal-label{{ data.id }}"
-         aria-hidden="true"
-    >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header d-flex flex-row">
-                    <div class="align-items-start">
-                        <h5 class="modal-title" id="user-modal-label{{ data.id }}">
-                            {{ data.member_name }}
-                        </h5>
-                         <p>{{ data.member_major }}</p>
-                    </div>
-                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <img class="member_photo member_photo_detail" src="{{ data.member_photo.url }}">
-                    </div>
-                    <p>{{ data.member_desc }}</p>
-                </div>
-                <div class="modal-footer d-flex justify-content-between">
-                    <p>{{ data.member_contact }}</p>
-                    <a href="mailto: {{ data.member_contact }}" class="btn btn-primary">Contact</a>
-                </div>
-            </div>
-        </div>
-    </div>
-{% endfor %}
+{% include 'StudentModal.html' %}
