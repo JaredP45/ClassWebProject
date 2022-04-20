@@ -30,7 +30,6 @@
     background-color: #fefefe;
     margin: 10px;
 }
-
 /* If the screen size is 1200px wide or more, set the font-size to 80px */
 @media (min-width: 1200px) {
   .member_text {
