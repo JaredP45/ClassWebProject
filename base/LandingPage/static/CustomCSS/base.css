@@ -5,7 +5,8 @@ html {
     padding-top: 2em;
     padding-bottom: 60px;
     background: url("/static/img/body_background_image.png");
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
 }
 #about_section {
     padding-bottom: 60px;
