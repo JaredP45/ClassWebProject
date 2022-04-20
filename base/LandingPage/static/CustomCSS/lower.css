@@ -19,9 +19,18 @@
     width: 250px;
     margin-bottom: 1em;
 }
-.lower_section_container {
+.student_container {
     background-color: #fefefe;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
 }
+.student_detail {
+    background-color: #fefefe;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* If the screen size is 1200px wide or more, set the font-size to 80px */
 @media (min-width: 1200px) {
   .member_text {
