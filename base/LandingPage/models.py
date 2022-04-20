@@ -30,7 +30,7 @@ class LowerSection(models.Model):
     MAJOR = (
         (0, "Web Development"),
         (1, "Software Development"),
-        (3, "Digital Media"),
+        (2, "Digital Media"),
     )
 
     member_photo = models.ImageField(blank=True)
