@@ -10,7 +10,7 @@
     </div>
     <div id="webdev" class="row text-center justify-content-center collapse">
         {% for data in team %}
-            {% if data.member_major == 'Web Development' %}
+            {% if data.member_major == 0 %}
                 {% include 'StudentProfile.html' %}
             {% endif %}
         {% endfor %}
@@ -25,7 +25,7 @@
     </div>
     <div id="softdev" class="row text-center justify-content-center collapse">
         {% for data in team %}
-            {% if data.member_major == 'Software Development' %}
+            {% if data.member_major == 1 %}
                 {% include 'StudentProfile.html' %}
             {% endif %}
         {% endfor %}
@@ -40,7 +40,7 @@
     </div>
     <div id="digmed" class="row text-center justify-content-center collapse">
         {% for data in team %}
-            {% if data.member_major == 'Digital Media' %}
+            {% if data.member_major == 3 %}
                 {% include 'StudentProfile.html' %}
             {% endif %}
         {% endfor %}
