@@ -1,11 +1,13 @@
 {% load static %}
+<link rel="stylesheet" href="{% static 'CustomCSS/lower.css' %}" />
+
 {% for data in student %}
     <div class="text-center">
         <h4>{{ data.student_section_description }}</h4>
     </div>
 {% endfor %}
 
-<div class="container border mt-5 mb-5 p-5">
+<div class="lower_section_container container border mt-5 mb-5 p-5">
     <div class="d-flex justify-content-between p-5"
          data-toggle="collapse"
          data-target="#webdev"
