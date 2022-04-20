@@ -1,0 +1,33 @@
+{% for data in team %}
+    <!-- Modal -->
+    <div class="modal fade"
+         id="user-modal{{ data.id }}"
+         tabindex="-1" role="dialog"
+         aria-labelledby="user-modal-label{{ data.id }}"
+         aria-hidden="true"
+    >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex flex-row">
+                    <div class="align-items-start">
+                        <h5 class="modal-title" id="user-modal-label{{ data.id }}">
+                            {{ data.member_name }}
+                        </h5>
+                         <p>{{ data.get_member_major_display }}</p>
+                    </div>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img class="mb-1" src="{{ data.member_photo.url }}" width="150px">
+                    </div>
+                    <p>{{ data.member_desc }}</p>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <p>{{ data.member_contact }}</p>
+                    <a href="mailto: {{ data.member_contact }}" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}
