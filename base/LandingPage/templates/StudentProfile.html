@@ -1,12 +1,12 @@
 <!-- Modal Trigger -->
 <!-- FIXME border being used to measure positioning of items -->
 
-<div class="border col-lg-2 col-md-4 col-sm-6 col-6"
+<div class="student_detail zoom border col-lg-2 col-md-4 col-sm-4 col-4"
      data-toggle="modal"
      data-target="#user-modal{{ data.id }}"
      style="cursor: pointer;"
 >
-    <img src="{{ data.member_photo.url }}" width="150px">
+    <img class="member_photo_grid img-fluid" src="{{ data.member_photo.url }}">
     <h2>{{ data.member_name }}</h2>
     <p>{{ data.get_member_major_display }}</p>
 </div>

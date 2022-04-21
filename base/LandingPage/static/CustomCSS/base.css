@@ -2,12 +2,16 @@ html {
     height: 100%;
 }
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #eeeeee;
+
 }
-#content {
+#student_section {
+    padding-top: 2em;
+    padding-bottom: 60px;
+    background: url("/static/img/body_background_image.png");
+    background-size: cover;
+    background-position: center top;
+}
+#about_section {
     padding-bottom: 60px;
 }
 #container {

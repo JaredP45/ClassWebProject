@@ -2,17 +2,18 @@
 {% for data in about %}
     <!-- FIXME border being used to measure positioning of items -->
     <div class="midSection container border">
+        <h3 class="text-center">{{ data.about_us }}</h3>
         <div class="row">
             <div class="border text-center">
                 {% if data.game_photo %}
-                    <a href="https://callofthecold.com">
+                    <a href="https://callofthecold.com" target="_blank" rel="noopener noreferrer">
                         <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
                              src="{{ data.game_photo.url }}"
                         >
                     </a>
                 {% endif %}
                 {% if data.movie_photo %}
-                    <a href="https://fourpointmovie.com">
+                    <a href="https://fourpointmovie.com" target="_blank" rel="noopener noreferrer">
                         <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
                              src="{{ data.movie_photo.url }}"
                         >
@@ -21,5 +22,4 @@
             </div>
         </div>
     </div>
-    <h3 class="text-center">{{ data.about_us }}</h3>
 {% endfor %}

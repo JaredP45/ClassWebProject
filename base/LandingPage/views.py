@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 
 from .forms import ContactForm
-from .models import UpperSection, MidSection, LowerSection
+from .models import UpperSection, MidSection, LowerSection, StudentSection
 
 
 def base(request):
@@ -28,6 +28,7 @@ def base(request):
     context = {
         'greeting': UpperSection.objects.all(),
         'about': MidSection.objects.all(),
+        'student': StudentSection.objects.all(),
         'team': LowerSection.objects.all(),
         'form': form,
     }

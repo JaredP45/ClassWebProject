@@ -1,3 +1,16 @@
 .navbar {
-    background-color: #fefefe;
+    background-color: #42235e;
+    color: #a29061;
+}
+a:link {
+    color: #a29061;
+}
+a:visited {
+    color: #a29061;
+}
+a:hover {
+    color: #fefefe;
+}
+a:active {
+    color: #fefefe;
 }

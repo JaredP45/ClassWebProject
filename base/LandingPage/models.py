@@ -26,6 +26,13 @@ class MidSection(models.Model):
         verbose_name_plural = 'Middle Sections'
 
 
+class StudentSection(models.Model):
+    student_section_description = models.TextField(max_length=750, default="")
+
+    def __str__(self):
+        return "Student section description."
+
+
 class LowerSection(models.Model):
     MAJOR = (
         (0, "Web Development"),

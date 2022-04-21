@@ -1,1 +1,47 @@
-/* Temporarily Empty */
+.profile {
+    background-color: #fefefe;
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    height: 250px;
+}
+.member_text {
+    margin: 10px;
+}
+.member_photo {
+    border-radius: 25px;
+}
+.member_photo_grid {
+    width: 150px;
+    border-radius: 50%;
+}
+.member_photo_detail {
+    width: 250px;
+    margin-bottom: 1em;
+    border-radius: 50%;
+}
+.student_container {
+    background-color: #fefefe;
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.student_detail {
+    background-color: #fefefe;
+    margin: 10px;
+    border-radius: 25px;
+}
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+  .member_text {
+    font-size: 20px;
+  }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .member_text {
+    font-size: 16px;
+  }
+}

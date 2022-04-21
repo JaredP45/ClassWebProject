@@ -2,7 +2,8 @@
     <!-- Modal -->
     <div class="modal fade"
          id="user-modal{{ data.id }}"
-         tabindex="-1" role="dialog"
+         tabindex="-1"
+         role="dialog"
          aria-labelledby="user-modal-label{{ data.id }}"
          aria-hidden="true"
     >
@@ -13,13 +14,13 @@
                         <h5 class="modal-title" id="user-modal-label{{ data.id }}">
                             {{ data.member_name }}
                         </h5>
-                         <p>{{ data.get_member_major_display }}</p>
+                        <p>{{ data.get_member_major_display }}</p>
                     </div>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="text-center">
-                        <img class="mb-1" src="{{ data.member_photo.url }}" width="150px">
+                        <img class="member_photo_detail img-fluid mb-1" src="{{ data.member_photo.url }}">
                     </div>
                     <p>{{ data.member_desc }}</p>
                 </div>
