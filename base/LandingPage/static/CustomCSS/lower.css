@@ -10,14 +10,16 @@
     margin: 10px;
 }
 .member_photo {
-    border-radius: 5%;
+    border-radius: 25px;
 }
 .member_photo_grid {
     width: 150px;
+    border-radius: 25px;
 }
 .member_photo_detail {
     width: 250px;
     margin-bottom: 1em;
+    border-radius: 25px;
 }
 .student_container {
     background-color: #fefefe;
