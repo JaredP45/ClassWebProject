@@ -1,8 +1,5 @@
 base/.env
 db.sqlite3
-*.jpg
-*.JPG
-*.png
-*.jpeg
+media/
 __pycache__
 ../.idea/

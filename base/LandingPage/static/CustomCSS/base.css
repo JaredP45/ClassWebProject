@@ -8,7 +8,7 @@ body {
     padding-top: 2em;
     padding-bottom: 60px;
     background: url("/static/img/body_background_image.png");
-    background-size: cover;
+    background-repeat: repeat-y;
     background-position: center top;
 }
 #about_section {
