@@ -1,3 +1,9 @@
 .asteriskField {
     display: none;
 }
+.contact-field {
+    margin: 15px;
+}
+.captcha {
+    text-align: center;
+}

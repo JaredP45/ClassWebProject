@@ -2,15 +2,15 @@
     background-color: #42235e;
     color: #a29061;
 }
-a:link {
+.nav-link:link {
     color: #a29061;
 }
-a:visited {
+.nav-link:visited {
     color: #a29061;
 }
-a:hover {
+.nav-link:hover {
     color: #fefefe;
 }
-a:active {
+.nav-link:active {
     color: #fefefe;
 }

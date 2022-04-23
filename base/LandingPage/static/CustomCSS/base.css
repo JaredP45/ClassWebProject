@@ -18,3 +18,14 @@ body {
     min-height: 100%;
     position: relative;
 }
+/* Global bootstrap button style override */
+.btn-primary {
+    background-color: #42235e;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active    {
+    background-color: #fefefe;
+    color: #42235e;
+    border-color: #42235e;
+}
