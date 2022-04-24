@@ -1,11 +1,11 @@
 {% load static %}
 {% for data in greeting %}
     <body>
-        <header class="page-header header container-fluid">
-            <img class="img-fluid" src="{{ data.banner.url }}">
+        <header class="page-header header">
+            <img class="banner" src="{% static 'img/header_background_image.png' %}">
             <div class="overlay"></div>
 
-            <div class="description" style="color: white">
+            <div class="description col-lg-4 col-md-4 col-sm-8 col-10">
                 <h1>{{ data.welcome_message }}</h1>
             </div>
         </header>

@@ -1,7 +1,10 @@
 .header {
-    background-size: cover;
-    background-position: center;
     position: relative;
+    background-position: center, center;
+    background-size: 100vw auto;
+    background-attachment: fixed;
+}
+.banner {
     box-shadow: 5px 5px 5px gray;
 }
 .overlay {
@@ -18,4 +21,21 @@
 	top: 45%;
 	transform: translate(-50%, -55%);
 	text-align: center;
+	color: #fefefe;
+}
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+    .header, .banner {
+        min-height: auto;
+        width: 100%;
+    }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+    .header, .banner {
+        min-height: 300px;
+        width: auto;
+        overflow: hidden;
+    }
 }
