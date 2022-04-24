@@ -1,4 +1,5 @@
 {% load static %}
+
 <!-- FIXME border being used to measure positioning of items -->
 <div id='footer' class="border">
     <footer class="page-footer">
@@ -6,23 +7,31 @@
             <div class="row">
                 <div class="extra-links col-lg-8 col-md-8 col-sm-12">
                     <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
-                    <p>Resources used go here.</p>
+                    <p>Butler images and assets used with permission.</p>
+                    <p>Used django and bootstrap frameworks for basis of project.</p>
                 </div>
 
                 <div class="contact-links col-lg-4 col-md-4 col-sm-12">
                     <h6 class="text-uppercase font-weight-bold">Contact</h6>
                     <p>
-                        contact@ButlerCapstone.com
+                        Capstone2022@butlercc.edu
                         <br>
-                        butlercc.edu
+                        Butlercc.edu
                     </p>
                 </div>
             </div>
         </div>
         <div class="footer-copyright text-center">
-            2022 © ButlerCapstone2022
+            2022 © Butler Capstone of 2022
             <br/>
-            Made with ❤ by Butler Community College 2022 Capstone Class
+            <div class="framework">
+                <a class="django" href="https://www.djangoproject.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'img/django-logo.svg' %}" style="width:100px;">
+                </a>
+                <a class="bootstrap" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="{% static 'img/bootstrap-logo.svg' %}" style="width:50px;">
+                </a>
+            </div>
         </div>
     </footer>
 </div>
