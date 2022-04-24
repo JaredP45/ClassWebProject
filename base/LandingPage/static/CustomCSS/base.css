@@ -1,9 +1,6 @@
 html {
     height: 100%;
 }
-body {
-
-}
 #student_section {
     padding-top: 2em;
     padding-bottom: 60px;
@@ -28,4 +25,13 @@ body {
     background-color: #fefefe;
     color: #42235e;
     border-color: #42235e;
+}
+
+.snap-container {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(1000px);
+    scroll-snap-type: y mandatory;
+}
+.snap-child {
+    scroll-snap-align: start;
 }

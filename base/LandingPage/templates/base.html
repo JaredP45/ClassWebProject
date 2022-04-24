@@ -24,13 +24,21 @@
     {% include 'Messages.html' %}
     {% include 'Contact.html' %}
     <body>
-        {% include 'UpperSection.html' %}
-
-        <div id='student_section'>
-            <div id="about_section">
-                {% include 'MidSection.html' %}
+        <div class="snap-container">
+            <div class="snap-child">
+                {% include 'UpperSection.html' %}
             </div>
-            {% include 'LowerSection.html' %}
+
+            <div id='student_section'>
+                <div id="about_section">
+                    <div class="snap-child">
+                        {% include 'MidSection.html' %}
+                    </div>
+                </div>
+                <div class="snap-child">
+                    {% include 'LowerSection.html' %}
+                </div>
+            </div>
         </div>
 
         <!-- Imported JS -->
