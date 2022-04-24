@@ -10,8 +10,6 @@ class UpperSection(models.Model):
 
 
 class MidSection(models.Model):
-    game_photo = models.ImageField(blank=True)
-    movie_photo = models.ImageField(blank=True)
     about_us = models.TextField(default='Enter text about us.', blank=True)
 
     def __str__(self):

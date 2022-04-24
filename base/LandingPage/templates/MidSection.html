@@ -5,20 +5,16 @@
         <h3 class="text-center">{{ data.about_us }}</h3>
         <div class="row">
             <div class="border text-center">
-                {% if data.game_photo %}
-                    <a href="https://callofthecold.com" target="_blank" rel="noopener noreferrer">
-                        <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
-                             src="{{ data.game_photo.url }}"
-                        >
-                    </a>
-                {% endif %}
-                {% if data.movie_photo %}
-                    <a href="https://fourpointmovie.com" target="_blank" rel="noopener noreferrer">
-                        <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
-                             src="{{ data.movie_photo.url }}"
-                        >
-                    </a>
-                {% endif %}
+                <a href="https://callofthecold.com" target="_blank" rel="noopener noreferrer">
+                    <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
+                         src="{% static 'img/game_photo.png' %}"
+                    >
+                </a>
+                <a href="https://fourpointmovie.com" target="_blank" rel="noopener noreferrer">
+                    <img class="rounded img-fluid zoom col-lg-4 col-md-4 col-sm-8 col-10"
+                         src="{% static 'img/movie_photo.jpg' %}"
+                    >
+                </a>
             </div>
         </div>
     </div>
