@@ -25,8 +25,18 @@
                     <p>{{ data.member_desc }}</p>
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
-                    <a href="mailto: {{ data.member_portfolio }}" class="btn btn-primary">Check out my Portfolio!</a>
-                    <a href="mailto: {{ data.member_contact }}" class="btn btn-primary">Contact</a>
+                    <a href="{{ data.member_portfolio }}"
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                    >
+                        Check out my Portfolio!
+                    </a>
+                    <a href="mailto: {{ data.member_contact }}"
+                       class="btn btn-primary"
+                    >
+                        Contact
+                    </a>
                 </div>
             </div>
         </div>
