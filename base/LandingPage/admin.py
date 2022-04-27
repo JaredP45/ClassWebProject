@@ -4,10 +4,6 @@ from django.contrib import admin
 from .models import UpperSection, MidSection, LowerSection, PageFooter, StudentSection
 
 
-class LowerAdmin(admin.ModelAdmin):
-    fields = ('member_major', )
-
-
 class SectionAdmin(admin.ModelAdmin):
     if not settings.DEBUG:
         def has_delete_permission(self, request, obj=None):
@@ -20,5 +16,5 @@ class SectionAdmin(admin.ModelAdmin):
 admin.site.register(UpperSection, SectionAdmin)
 admin.site.register(MidSection, SectionAdmin)
 admin.site.register(StudentSection, SectionAdmin)
-admin.site.register(LowerSection, LowerAdmin)
+admin.site.register(LowerSection)
 admin.site.register(PageFooter, SectionAdmin)
