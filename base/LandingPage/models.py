@@ -31,10 +31,11 @@ class LowerSection(models.Model):
         (3, "Interactive, Digital, & 3D Technology")
     )
 
-    member_photo = models.ImageField(blank=True)
+    member_photo = models.ImageField(blank=True, null=True)
     member_name = models.CharField(max_length=250, default="")
     member_major = models.IntegerField(choices=MAJOR, default=0)
     member_desc = models.TextField(max_length=1500, default="")
+    member_portfolio = models.CharField(max_length=250, default="")
     member_contact = models.CharField(max_length=250, default="")
 
     def __str__(self):
