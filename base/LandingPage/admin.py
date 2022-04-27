@@ -5,11 +5,12 @@ from .models import UpperSection, MidSection, LowerSection, PageFooter, StudentS
 
 
 class SectionAdmin(admin.ModelAdmin):
-    def has_delete_permission(self, request, obj=None):
-        return False
+    if not settings.DEBUG:
+        def has_delete_permission(self, request, obj=None):
+            return False
 
-    def has_add_permission(self, request):
-        return False
+        def has_add_permission(self, request):
+            return False
 
 
 admin.site.register(UpperSection, SectionAdmin)
