@@ -10,6 +10,21 @@
 
     <div class="d-flex justify-content-between p-5"
          data-toggle="collapse"
+         data-target="#id3d"
+    >
+        <h2 style="cursor: pointer;">Interactive, Digital, & 3D Technology Designers</h2>
+        <i class="fas fa-arrow-down" style="cursor: pointer;"></i>
+    </div>
+    <div id="id3d" class="row text-center justify-content-center collapse">
+        {% for data in team %}
+            {% if data.member_major == 4 %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="d-flex justify-content-between p-5"
+         data-toggle="collapse"
          data-target="#webdev"
     >
         <h2 style="cursor: pointer;">Website Developers</h2>
@@ -25,21 +40,6 @@
 
     <div class="d-flex justify-content-between p-5"
          data-toggle="collapse"
-         data-target="#softdev"
-    >
-        <h2 style="cursor: pointer;">Software Developers</h2>
-        <i class="fas fa-arrow-down" style="cursor: pointer;"></i>
-    </div>
-    <div id="softdev" class="row text-center justify-content-center collapse">
-        {% for data in team %}
-            {% if data.member_major == 1 %}
-                {% include 'StudentProfile.html' %}
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <div class="d-flex justify-content-between p-5"
-         data-toggle="collapse"
          data-target="#digmed"
     >
         <h2 style="cursor: pointer;">Digital Media</h2>
@@ -48,6 +48,21 @@
     <div id="digmed" class="row text-center justify-content-center collapse">
         {% for data in team %}
             {% if data.member_major == 2 %}
+                {% include 'StudentProfile.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="d-flex justify-content-between p-5"
+         data-toggle="collapse"
+         data-target="#softdev"
+    >
+        <h2 style="cursor: pointer;">Software Developers</h2>
+        <i class="fas fa-arrow-down" style="cursor: pointer;"></i>
+    </div>
+    <div id="softdev" class="row text-center justify-content-center collapse">
+        {% for data in team %}
+            {% if data.member_major == 1 %}
                 {% include 'StudentProfile.html' %}
             {% endif %}
         {% endfor %}
